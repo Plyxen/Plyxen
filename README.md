@@ -36,8 +36,9 @@ I mostly write Discord bots in Python and Windows tools in C#. A lot of what I b
 
 ## Listening to
 
+<!-- Served by the Cloudflare Worker in card/ -->
 <p align="center">
-  <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31tj5vzb4nbxsxfuazazl5scwt6e&cover_image=true&theme=spotify-embed&mode=dark&show_offline=false&interchange=false&profanity=false&hide_remaster=true" alt="Spotify now playing" />
+  <img src="https://spotify-card.plyxen.workers.dev/" alt="Spotify now playing" />
 </p>
 
 ## Projects

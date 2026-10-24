@@ -1,0 +1,11 @@
+name = "spotify-card"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+DISCORD_ID = "403927182797307904"
+
+# Remembers the last track so the card can show "Recently played"
+[[kv_namespaces]]
+binding = "CARD_KV"
+id = "f5e40f253d5047b99634fd113b1d2734"
