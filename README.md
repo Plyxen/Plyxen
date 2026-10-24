@@ -37,7 +37,7 @@ I mostly write Discord bots in Python and Windows tools in C#. A lot of what I b
 ## Listening to
 
 <p align="center">
-  <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31tj5vzb4nbxsxfuazazl5scwt6e&cover_image=true&theme=default&background_color=1a1b27&bar_color=bf91f3&bar_color_cover=false&show_offline=false&interchange=false&profanity=false&hide_remaster=true" alt="Spotify now playing" />
+  <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31tj5vzb4nbxsxfuazazl5scwt6e&cover_image=true&theme=spotify-embed&mode=dark&show_offline=false&interchange=false&profanity=false&hide_remaster=true" alt="Spotify now playing" />
 </p>
 
 ## Projects
