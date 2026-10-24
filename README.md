@@ -34,12 +34,10 @@
 
 I mostly write Discord bots in Python and Windows tools in C#. A lot of what I build starts as something I wanted for a game I'm playing, which right now is Aion 2 and Warframe. The bots run 24/7 on a Raspberry Pi 5 at home.
 
-## Right now
+## Listening to
 
 <p align="center">
-  <a href="https://discord.com/users/403927182797307904">
-    <img src="https://lanyard.cnrad.dev/api/403927182797307904?theme=dark&bg=1a1b27&borderRadius=10px&hideBadges=true&idleMessage=Not%20doing%20anything%20right%20now" alt="Discord presence" />
-  </a>
+  <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31tj5vzb4nbxsxfuazazl5scwt6e&cover_image=true&theme=default&background_color=1a1b27&bar_color=bf91f3&bar_color_cover=false&show_offline=false&interchange=false&profanity=false&hide_remaster=true" alt="Spotify now playing" />
 </p>
 
 ## Projects
