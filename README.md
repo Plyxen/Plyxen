@@ -11,16 +11,6 @@
   <a href="https://github.com/Plyxen?tab=followers"><img src="https://img.shields.io/github/followers/Plyxen?label=Followers&style=flat&color=bf91f3" alt="Followers" /></a>
 </p>
 
-I make Discord bots in Python and Windows tools in C#. Right now I'm working on a DPS meter for Aion 2.
-
-## Right now
-
-<p align="center">
-  <a href="https://discord.com/users/403927182797307904">
-    <img src="https://lanyard.cnrad.dev/api/403927182797307904?theme=dark&bg=1a1b27&borderRadius=10px&hideBadges=true&idleMessage=Not%20doing%20anything%20right%20now" alt="Discord presence" />
-  </a>
-</p>
-
 ## Tech stack
 
 <p align="center">
@@ -35,6 +25,36 @@ I make Discord bots in Python and Windows tools in C#. Right now I'm working on 
   <img src="https://streak-stats.demolab.com?user=Plyxen&theme=tokyonight&hide_border=true&border_radius=10" alt="GitHub streak" />
 </p>
 
+<!-- Volunteer mirror of github-profile-trophy (the main instance is offline). If it breaks, pick another from https://github.com/ryo-ma/github-profile-trophy#public-instances -->
+<p align="center">
+  <img src="https://github-trophies.devomb.com/?username=Plyxen&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&column=-1&rank=SECRET,SSS,SS,S,AAA,AA,A,B,C" alt="Trophies" />
+</p>
+
+## About me
+
+I mostly write Discord bots in Python and Windows tools in C#. A lot of what I build starts as something I wanted for a game I'm playing, which right now is Aion 2 and Warframe. The bots run 24/7 on a Raspberry Pi 5 at home.
+
+## Right now
+
+<p align="center">
+  <a href="https://discord.com/users/403927182797307904">
+    <img src="https://lanyard.cnrad.dev/api/403927182797307904?theme=dark&bg=1a1b27&borderRadius=10px&hideBadges=true&idleMessage=Not%20doing%20anything%20right%20now" alt="Discord presence" />
+  </a>
+</p>
+
+## Projects
+
+**Aion 2 DPS Meter** · C#, WPF<br />
+Damage meter and combat overlay for Aion 2. It reads the game's packets passively instead of touching the client. Started from Kuroukihime's meter and I redid the whole UI.
+
+**Car-bot** · Python, PostgreSQL<br />
+The bot for my own server. Moderation, a word filter that catches leetspeak and spacing tricks, warnings that escalate into timeouts and bans, a raid shield, tickets, and Twitch and Spotify stuff for streams.
+
+**AoD** · Python<br />
+The bot for Art of Destruction, a Warframe clan. Clan applications with accept and reject buttons, auto-mod, tickets, events, giveaways and Warframe news.
+
+These three are private. Public stuff: my [ClearVision fork](https://github.com/Plyxen/ClearVisionV7-Fork) (a Vencord theme) and a fork of [QuantFrame](https://github.com/Plyxen/quantframe-fork), a Warframe trading tool.
+
 <!-- Generated daily by .github/workflows/snake.yml into the "output" branch -->
 <p align="center">
   <picture>
@@ -42,11 +62,6 @@ I make Discord bots in Python and Windows tools in C#. Right now I'm working on 
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Plyxen/Plyxen/output/github-snake.svg" />
     <img src="https://raw.githubusercontent.com/Plyxen/Plyxen/output/github-snake-dark.svg" width="100%" alt="Snake eating my contribution graph" />
   </picture>
-</p>
-
-<!-- Volunteer mirror of github-profile-trophy (the main instance is offline). If it breaks, pick another from https://github.com/ryo-ma/github-profile-trophy#public-instances -->
-<p align="center">
-  <img src="https://github-trophies.devomb.com/?username=Plyxen&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&column=-1&rank=SECRET,SSS,SS,S,AAA,AA,A,B,C" alt="Trophies" />
 </p>
 
 <p align="center">
