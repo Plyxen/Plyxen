@@ -14,9 +14,11 @@
 ## Tech stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=py,cs,dotnet,rust,cpp,css,postgres,sqlite&perline=8&theme=dark" alt="Languages" />
+  <img src="https://skillicons.dev/icons?i=py,cs,dotnet,js,nodejs,rust,cpp,css&perline=8&theme=dark" alt="Languages" />
   <br />
-  <img src="https://skillicons.dev/icons?i=discord,raspberrypi,linux,windows,powershell,git,github,visualstudio,vscode&perline=9&theme=dark" alt="Tools" />
+  <img src="https://skillicons.dev/icons?i=postgres,sqlite,cloudflare,raspberrypi,linux,githubactions&perline=6&theme=dark" alt="Data and hosting" />
+  <br />
+  <img src="https://skillicons.dev/icons?i=discord,windows,powershell,git,github,visualstudio,vscode&perline=7&theme=dark" alt="Tools" />
 </p>
 
 ## Stats
@@ -52,7 +54,10 @@ The bot for my own server. Moderation, a word filter that catches leetspeak and 
 **AoD** · Python<br />
 The bot for Art of Destruction, a Warframe clan. Clan applications with accept and reject buttons, auto-mod, tickets, events, giveaways and Warframe news.
 
-These three are private. Public stuff: my [ClearVision fork](https://github.com/Plyxen/ClearVisionV7-Fork) (a Vencord theme) and a fork of [QuantFrame](https://github.com/Plyxen/quantframe-fork), a Warframe trading tool.
+**[Spotify card](https://github.com/Plyxen/Plyxen/tree/main/card)** · JavaScript, Cloudflare Workers<br />
+The "Listening to" card on this page. A Cloudflare Worker reads my Spotify status from Discord through Lanyard and draws an SVG where the progress bar and the time actually move. Falls back to the last song when nothing's playing.
+
+The first three are private. Also public: my [ClearVision fork](https://github.com/Plyxen/ClearVisionV7-Fork) (a Vencord theme) and a fork of [QuantFrame](https://github.com/Plyxen/quantframe-fork), a Warframe trading tool.
 
 <!-- Generated daily by .github/workflows/snake.yml into the "output" branch -->
 <p align="center">
