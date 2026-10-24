@@ -13,6 +13,14 @@
 
 I make Discord bots in Python and Windows tools in C#. Right now I'm working on a DPS meter for Aion 2.
 
+## Right now
+
+<p align="center">
+  <a href="https://discord.com/users/403927182797307904">
+    <img src="https://lanyard.cnrad.dev/api/403927182797307904?theme=dark&bg=1a1b27&borderRadius=10px&hideBadges=true&idleMessage=Not%20doing%20anything%20right%20now" alt="Discord presence" />
+  </a>
+</p>
+
 ## Tech stack
 
 <p align="center">
