@@ -45,19 +45,22 @@ I mostly write Discord bots in Python and Windows tools in C#. A lot of what I b
 
 ## Projects
 
-**Aion 2 DPS Meter** · C#, WPF<br />
+**[claude-coop](https://github.com/Plyxen/claude-coop)** · JavaScript, Cloudflare Workers<br />
+Co-op mode for Claude Code. My Claude is the lead and hands tasks to my friends' Claudes, running on their own PCs and accounts. Each one takes a task, does it on its own branch, opens a pull request and reports back, and the lead reviews it before anything gets merged.
+
+**Aion 2 DPS Meter** · C#, WPF · private<br />
 Damage meter and combat overlay for Aion 2. It reads the game's packets passively instead of touching the client. Started from Kuroukihime's meter and I redid the whole UI.
 
-**Car-bot** · Python, PostgreSQL<br />
+**Car-bot** · Python, PostgreSQL · private<br />
 The bot for my own server. Moderation, a word filter that catches leetspeak and spacing tricks, warnings that escalate into timeouts and bans, a raid shield, tickets, and Twitch and Spotify stuff for streams.
 
-**AoD** · Python<br />
+**AoD** · Python · private<br />
 The bot for Art of Destruction, a Warframe clan. Clan applications with accept and reject buttons, auto-mod, tickets, events, giveaways and Warframe news.
 
 **[Spotify card](https://github.com/Plyxen/Plyxen/tree/main/card)** · JavaScript, Cloudflare Workers<br />
 The "Listening to" card on this page. A Cloudflare Worker reads my Spotify status from Discord through Lanyard and draws an SVG where the progress bar and the time actually move. Falls back to the last song when nothing's playing.
 
-The first three are private. Also public: my [ClearVision fork](https://github.com/Plyxen/ClearVisionV7-Fork) (a Vencord theme) and a fork of [QuantFrame](https://github.com/Plyxen/quantframe-fork), a Warframe trading tool.
+Also on here: my [ClearVision fork](https://github.com/Plyxen/ClearVisionV7-Fork) (a Vencord theme) and a fork of [QuantFrame](https://github.com/Plyxen/quantframe-fork), a Warframe trading tool.
 
 <!-- Generated daily by .github/workflows/snake.yml into the "output" branch -->
 <p align="center">
