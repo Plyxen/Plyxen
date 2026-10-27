@@ -45,8 +45,8 @@ I mostly write Discord bots in Python and Windows tools in C#. A lot of what I b
 
 ## Projects
 
-**[claude-coop](https://github.com/Plyxen/claude-coop)** · JavaScript, Cloudflare Workers<br />
-Co-op mode for Claude Code. My Claude is the lead and hands tasks to my friends' Claudes, running on their own PCs and accounts. Each one takes a task, does it on its own branch, opens a pull request and reports back, and the lead reviews it before anything gets merged.
+**[claude-code-multi-pc](https://github.com/Plyxen/claude-code-multi-pc)** · JavaScript, Cloudflare Workers<br />
+Runs Claude Code across several PCs and Claude accounts as one team. My Claude is the lead and hands tasks to my friends' Claudes, each on their own PC and account. They take a task, do it on its own branch, open a pull request and report back, and the lead reviews it before anything gets merged.
 
 **Aion 2 DPS Meter** · C#, WPF · private<br />
 Damage meter and combat overlay for Aion 2. It reads the game's packets passively instead of touching the client. Started from Kuroukihime's meter and I redid the whole UI.
