@@ -4,6 +4,12 @@ compatibility_date = "2026-10-01"
 
 [vars]
 DISCORD_ID = "403927182797307904"
+# SPOTIFY_CARD_UID is a secret (wrangler secret put SPOTIFY_CARD_UID): the uid
+# from logging in at https://spotify-github-profile.kittinanx.com/api/login
+
+# Checks what's playing every 5 minutes so the last track stays current
+[triggers]
+crons = ["*/5 * * * *"]
 
 # Remembers the last track so the card can show "Recently played"
 [[kv_namespaces]]

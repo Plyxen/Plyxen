@@ -1,9 +1,10 @@
 // Spotify "now playing" card for the GitHub profile README.
 //
-// Reads the Spotify part of a Discord presence from Lanyard (games are ignored)
-// and returns an SVG whose progress bar and elapsed time keep moving while the
-// page is open. When nothing is playing it shows the last track it saw, if a
-// CARD_KV namespace is bound.
+// Asks two places what's playing. Lanyard reads the Spotify part of my Discord
+// presence (games are ignored) and has exact timestamps, but only while Discord
+// is open. The spotify-github-profile card reads Spotify itself, so it still works
+// when Discord is closed. Returns an SVG whose progress bar and elapsed time keep
+// moving while the page is open, and shows the last track when nothing's playing.
 
 const W = 460;
 const H = 152;
@@ -22,31 +23,14 @@ export default {
   async fetch(request, env, ctx) {
     if (new URL(request.url).pathname !== "/") return new Response("Not found", { status: 404 });
 
-    let track = null;
-    let playing = false;
-    try {
-      const res = await fetch(`https://api.lanyard.rest/v1/users/${env.DISCORD_ID}`);
-      const body = await res.json();
-      if (body.success && body.data.listening_to_spotify && body.data.spotify) {
-        track = body.data.spotify;
-        playing = true;
-      }
-    } catch {
-      // Lanyard down: fall through to the last track or the idle card
-    }
-
+    let track = await nowPlaying(env);
+    const playing = Boolean(track);
     if (env.CARD_KV) {
-      if (playing) {
-        const last = await env.CARD_KV.get("last", "json");
-        if (!last || last.track_id !== track.track_id) {
-          ctx.waitUntil(env.CARD_KV.put("last", JSON.stringify(track)));
-        }
-      } else {
-        track = await env.CARD_KV.get("last", "json");
-      }
+      if (playing) ctx.waitUntil(remember(env, track));
+      else track = await env.CARD_KV.get("last", "json");
     }
 
-    const cover = track ? await fetchCover(track.album_art_url) : null;
+    const cover = track ? await fetchCover(track.cover) : null;
     return new Response(render(track, playing, cover, Date.now()), {
       headers: {
         "content-type": "image/svg+xml; charset=utf-8",
@@ -54,12 +38,77 @@ export default {
       },
     });
   },
+
+  // Runs every few minutes (see wrangler.toml) so "Recently played" is the real
+  // last song even when nobody had the page open while it was playing.
+  async scheduled(controller, env) {
+    const track = await nowPlaying(env);
+    if (track && env.CARD_KV) await remember(env, track);
+  },
 };
+
+async function nowPlaying(env) {
+  const [discord, spotify] = await Promise.all([fromLanyard(env), fromSpotifyCard(env)]);
+  return discord ?? spotify;
+}
+
+async function remember(env, { song, artist, cover }) {
+  const last = await env.CARD_KV.get("last", "json");
+  if (last?.song === song && last?.artist === artist) return;
+  await env.CARD_KV.put("last", JSON.stringify({ song, artist, cover }));
+}
+
+async function fromLanyard(env) {
+  try {
+    const res = await fetch(`https://api.lanyard.rest/v1/users/${env.DISCORD_ID}`);
+    const { success, data } = await res.json();
+    if (!success || !data.listening_to_spotify || !data.spotify) return null;
+    const { song, artist, album_art_url, timestamps } = data.spotify;
+    return { song, artist, cover: album_art_url, timestamps };
+  } catch {
+    return null;
+  }
+}
+
+// kittinan/spotify-github-profile already has a Spotify login for my account, so
+// this reuses it instead of needing a Spotify developer app. Its spotify-embed
+// theme prints the song, cover and progress as plain HTML, which is easy to read.
+// Only "Now playing" is used: for "Recently played" it picks a random one of the
+// last 10 songs.
+async function fromSpotifyCard(env) {
+  if (!env.SPOTIFY_CARD_UID) return null;
+  try {
+    const res = await fetch(
+      `https://spotify-github-profile.kittinanx.com/api/view?uid=${env.SPOTIFY_CARD_UID}&theme=spotify-embed`,
+    );
+    if (!res.ok) return null;
+    const svg = await res.text();
+    if (match(svg, /class="status-text">\s*([^<]*?)\s*</) !== "Now playing") return null;
+    const song = match(svg, /class="track-name">([^<]*)</);
+    const artist = match(svg, /class="artist-name">([^<]*)</);
+    // "1:23" elapsed and "-2:34" left, rounded down to the second
+    const [elapsed, left] = [...svg.matchAll(/<span>-?(\d+):(\d\d)<\/span>/g)].map(
+      ([, m, s]) => (Number(m) * 60 + Number(s)) * 1000,
+    );
+    if (!song || !artist || !(elapsed + left > 0)) return null;
+
+    const now = Date.now();
+    return {
+      song: unesc(song),
+      artist: unesc(artist),
+      cover: match(svg, /class="album-cover" src="(data:image\/[^"]+)"/),
+      timestamps: { start: now - elapsed, end: now + left },
+    };
+  } catch {
+    return null;
+  }
+}
 
 // GitHub shows README images through a proxy that blocks external requests from
 // inside an SVG, so the cover has to be inlined. 300px is plenty for 120px.
 async function fetchCover(url) {
   if (!url) return null;
+  if (url.startsWith("data:")) return url;
   try {
     const res = await fetch(url.replace("ab67616d0000b273", "ab67616d00001e02"));
     if (!res.ok) return null;
@@ -141,4 +190,17 @@ function clip(text, max) {
 
 function esc(text) {
   return text.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
+}
+
+function match(text, re) {
+  return text.match(re)?.[1];
+}
+
+function unesc(text) {
+  return text
+    .replace(/&#(x?)([0-9a-f]+);/gi, (_, hex, n) => String.fromCodePoint(parseInt(n, hex ? 16 : 10)))
+    .replace(/&quot;/g, '"')
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&");
 }
