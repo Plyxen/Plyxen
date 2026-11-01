@@ -34,7 +34,11 @@
 
 ## About me
 
-I mostly write Discord bots in Python and Windows tools in C#. A lot of what I build starts as something I wanted for a game I'm playing, which right now is Aion 2 and Warframe. The bots run 24/7 on a Raspberry Pi 5 at home.
+I write Discord bots in Python and Windows tools in C#, usually because a game I'm playing needed something. Right now that's Aion 2 and Warframe.
+
+Lately I've been building outside of games too: an Android app for small shops, and a setup that lets Claude Code run across several PCs as one team.
+
+The bots run 24/7 on a Raspberry Pi 5 at home, and the small web services run on Cloudflare Workers.
 
 ## Listening to
 
