@@ -14,7 +14,7 @@
 ## Tech stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=py,cs,dotnet,java,js,nodejs,html,css,rust,cpp&perline=10&theme=dark" alt="Languages" />
+  <img src="https://skillicons.dev/icons?i=py,cs,dotnet,java,js,ts,nodejs,html,css,rust,cpp&perline=11&theme=dark" alt="Languages" />
   <br />
   <img src="https://skillicons.dev/icons?i=postgres,sqlite,cloudflare,raspberrypi,linux,githubactions&perline=6&theme=dark" alt="Data and hosting" />
   <br />
@@ -54,6 +54,9 @@ Runs Claude Code across several PCs and Claude accounts as one team. My Claude i
 
 **[Price Labels](https://github.com/Plyxen/price-labels)** · Android, Java, HTML<br />
 An Android app for small shops. It prints shelf price labels on A4, keeps the product list with stock levels, and builds the next order from whatever is running low. Imports the shop's CSV or XLSX export, scans barcodes, and updates itself from GitHub releases. English and Hungarian.
+
+**discord-rice** · CSS, TypeScript · private<br />
+Chillnight, a Vencord theme that makes Discord look like a tiled Linux desktop. One wallpaper behind the whole window, thin lines between the panes instead of boxes, greyscale, Iosevka, and a chat bar that looks like a terminal prompt. Built on midnight's layout. It comes with two small Vencord plugins I wrote: a code block button for the chat box and custom pictures for server folders.
 
 **Aion 2 DPS Meter** · C#, WPF · private<br />
 Damage meter and combat overlay for Aion 2. It reads the game's packets passively instead of touching the client. Started from Kuroukihime's meter and I redid the whole UI.
