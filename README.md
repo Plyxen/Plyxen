@@ -66,9 +66,6 @@ The bot for Art of Destruction, a Warframe clan. Clan applications with accept a
 
 **[Spotify card](https://github.com/Plyxen/Plyxen/tree/main/card)** · JavaScript, Cloudflare Workers<br />
 The "Listening to" card on this page. A Cloudflare Worker checks Spotify (directly, and through Discord when it's open) and draws an SVG where the progress bar and the time actually move. When nothing's playing it shows the last song.
-
-Also on here: my [ClearVision fork](https://github.com/Plyxen/ClearVisionV7-Fork) (a Vencord theme) and a fork of [QuantFrame](https://github.com/Plyxen/quantframe-fork), a Warframe trading tool.
-
 <!-- Generated daily by .github/workflows/snake.yml into the "output" branch -->
 <p align="center">
   <picture>
