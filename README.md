@@ -55,8 +55,8 @@ Runs Claude Code across several PCs and Claude accounts as one team. My Claude i
 **[Price Labels](https://github.com/Plyxen/price-labels)** · Android, Java, HTML<br />
 An Android app for small shops. It prints shelf price labels on A4, keeps the product list with stock levels, and builds the next order from whatever is running low. Imports the shop's CSV or XLSX export, scans barcodes, and updates itself from GitHub releases. English and Hungarian.
 
-**[discord-rice](https://github.com/Plyxen/discord-rice)** · TypeScript, CSS<br />
-Discord made to look like a tiling-WM Linux rice, as a Vencord theme. One wallpaper behind the whole window, thin lines between the panes instead of boxes, greyscale, Iosevka, and a chat bar that looks like a terminal prompt. Built on midnight's layout. Three optional plugins add an options panel inside Discord, an ASCII version of the wallpaper, pictures for server folders and a code block button.
+**[discord-rice](https://github.com/Plyxen/discord-rice)** · TypeScript, JavaScript, CSS<br />
+Discord made to look like a tiling-WM Linux rice, for Vencord and BetterDiscord. One wallpaper behind the whole window, thin lines between the panes instead of boxes, greyscale, Iosevka, and a chat bar that looks like a terminal prompt. The theme is a single file written against Discord's own styles, with no other theme underneath. Optional plugins add a terminal-style settings window, an ASCII version of the wallpaper, pictures for server folders and a code block button. One installer sets it all up on Windows, Linux or macOS, and an updater keeps it current from GitHub.
 
 **Aion 2 DPS Meter** · C#, WPF · private<br />
 Damage meter and combat overlay for Aion 2. It reads the game's packets passively instead of touching the client. Started from Kuroukihime's meter and I redid the whole UI.
