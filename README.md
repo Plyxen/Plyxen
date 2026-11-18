@@ -49,26 +49,27 @@ The bots run 24/7 on a Raspberry Pi 5 at home, and the small web services run on
 
 ## Projects
 
+**[discord-rice](https://github.com/Plyxen/discord-rice)** · TypeScript, CSS<br />
+Makes Discord look like a tiling-WM Linux rice. A theme and a few plugins for Vencord and BetterDiscord.
+
+**[steam-rice](https://github.com/Plyxen/steam-rice)** · CSS<br />
+The same look for Steam, as a Millennium theme.
+
 **[claude-code-multi-pc](https://github.com/Plyxen/claude-code-multi-pc)** · JavaScript, Cloudflare Workers<br />
-Runs Claude Code across several PCs and Claude accounts as one team. My Claude is the lead and hands tasks to my friends' Claudes, each on their own PC and account. They take a task, do it on its own branch, open a pull request and report back, and the lead reviews it before anything gets merged.
+Runs Claude Code across several PCs and accounts as one team, with one lead Claude handing out tasks.
 
-**[Price Labels](https://github.com/Plyxen/price-labels)** · Android, Java, HTML<br />
-An Android app for small shops. It prints shelf price labels on A4, keeps the product list with stock levels, and builds the next order from whatever is running low. Imports the shop's CSV or XLSX export, scans barcodes, and updates itself from GitHub releases. English and Hungarian.
+**[Price Labels](https://github.com/Plyxen/price-labels)** · Android, Java<br />
+An Android app for small shops: shelf price labels, stock and ordering.
 
-**[discord-rice](https://github.com/Plyxen/discord-rice)** · TypeScript, JavaScript, CSS<br />
-Discord made to look like a tiling-WM Linux rice, for Vencord and BetterDiscord. One wallpaper behind the whole window, thin lines between the panes instead of boxes, greyscale, Iosevka, and a chat bar that looks like a terminal prompt. The theme is a single file written against Discord's own styles, with no other theme underneath. Optional plugins add a terminal-style settings window, an ASCII version of the wallpaper, pictures for server folders and a code block button. One installer sets it all up on Windows, Linux or macOS, and an updater keeps it current from GitHub.
+**[csgo-chat-translator](https://github.com/Plyxen/csgo-chat-translator)** · C#<br />
+A Windows tray app that translates Russian chat in legacy CS:GO, both ways.
 
 **Aion 2 DPS Meter** · C#, WPF · private<br />
-Damage meter and combat overlay for Aion 2. It reads the game's packets passively instead of touching the client. Started from Kuroukihime's meter and I redid the whole UI.
+Damage meter and combat overlay for Aion 2 that reads the game's packets passively.
 
-**Car-bot** · Python, PostgreSQL · private<br />
-The bot for my own server. Moderation, a word filter that catches leetspeak and spacing tricks, warnings that escalate into timeouts and bans, a raid shield, tickets, and Twitch and Spotify stuff for streams.
+**Car-bot and AoD** · Python · private<br />
+Discord bots for my own server and for a Warframe clan: moderation, tickets, events and giveaways.
 
-**AoD** · Python · private<br />
-The bot for Art of Destruction, a Warframe clan. Clan applications with accept and reject buttons, auto-mod, tickets, events, giveaways and Warframe news.
-
-**[Spotify card](https://github.com/Plyxen/Plyxen/tree/main/card)** · JavaScript, Cloudflare Workers<br />
-The "Listening to" card on this page. A Cloudflare Worker checks Spotify (directly, and through Discord when it's open) and draws an SVG where the progress bar and the time actually move. When nothing's playing it shows the last song.
 <!-- Generated daily by .github/workflows/snake.yml into the "output" branch -->
 <p align="center">
   <picture>
